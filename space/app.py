@@ -206,9 +206,9 @@ with gr.Blocks(title="Qwen3VL 钢材表面缺陷识别") as demo:
     raw_out = gr.Textbox(label="模型原始输出 (微调后)", lines=4)
     gr.Examples(
         examples=[
-            ["examples/pitted_surface_220.jpg", "pitted_surface"],
-            ["examples/scratches_85.jpg", "scratches"],
+            ["examples/patches_219.jpg", "patches"],
             ["examples/scratches_201.jpg", "scratches"],
+            ["examples/inclusion_82.jpg", "inclusion"],
         ],
         inputs=[img_in, cls_in],
         label="示例图片 (NEU-DET 测试集,点一下试试)",
