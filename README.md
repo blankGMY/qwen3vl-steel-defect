@@ -31,6 +31,10 @@
 
 如实说明：inclusion 与 patches 两类 Acc@0.5 微降；微调预测框 766 个多于基线的 468 个，提升部分来自多出框，Prec@0.5 仅 14.74% → 16.71%；pitted_surface 的框常接近整图，该类 IoU 易虚高。完整数字见 [results/eval-v3-neudet.md](results/eval-v3-neudet.md)。
 
+## 在线演示
+
+[Qwen3VL 钢材表面缺陷识别演示](https://huggingface.co/spaces/GuoMingYu/qwen3vl-steel-defect-demo)（Hugging Face Space，Gradio + ZeroGPU，公开）：上传钢材表面图片、选择缺陷类别，三列对照微调后模型、真实标注与基线模型（真实标注为绿色框，NEU-DET 测试集图片可用，查找表见 `space/gt_lookup.json`）。示例图为按逐项 IoU 提升排序的前 3 张。演示程序见 `space/`。
+
 ## 部署
 
 权重合并回主干模型 → GGUF 量化（Q4_K_M）→ Docker + llama.cpp HTTP 服务，树莓派 4B 端侧推理。说明：v3 当前只保存了适配器，GGUF 合并与端侧部署按此前同一管线进行。
@@ -47,6 +51,7 @@
 | `scripts/` | 生成上述笔记本的脚本（本地生成，改完脚本重新生成笔记本） |
 | `dpo/` | DPO 偏好对数据（JSON） |
 | `results/` | v3 评估完整结果 |
+| `space/` | 在线演示程序（Gradio，三列对照：微调 / 真实标注 / 基线，部署于 Hugging Face Space） |
 
 ## 在 Kaggle 上复现
 

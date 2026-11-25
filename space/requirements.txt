@@ -1,0 +1,6 @@
+transformers==4.57.1
+peft
+accelerate
+pillow
+torchvision
+gradio==5.50.0
