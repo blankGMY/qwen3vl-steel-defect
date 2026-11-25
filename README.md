@@ -33,7 +33,7 @@
 
 ## 在线演示
 
-[Qwen3VL 钢材表面缺陷识别演示](https://huggingface.co/spaces/GuoMingYu/qwen3vl-steel-defect-demo)（Hugging Face Space，Gradio + ZeroGPU，公开）：上传钢材表面图片、选择缺陷类别，三列对照微调后模型、真实标注与基线模型（真实标注为绿色框，NEU-DET 测试集图片可用，查找表见 `space/gt_lookup.json`）。示例图为按逐项 IoU 提升排序的前 3 张。演示程序见 `space/`。
+[Qwen3VL 钢材表面缺陷识别演示](https://huggingface.co/spaces/GuoMingYu/qwen3vl-steel-defect-demo)（Hugging Face Space，Gradio + ZeroGPU，公开）：上传钢材表面图片、选择缺陷类别，三列对照微调后模型、真实标注与基线模型（真实标注为绿色框，NEU-DET 测试集图片可用，查找表见 `space/gt_lookup.json`）。示例图为框贴合缺陷、视觉效果较好的 3 张。演示程序见 `space/`。
 
 ## 部署
 
